@@ -39,7 +39,6 @@
     "build-storybook": "storybook build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "hompages": "https://akffhaos95.github.io/rascal_photo_card"
   },
   "eslintConfig": {
     "extends": [
@@ -75,5 +74,6 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.4.6",
     "webpack": "^5.88.2"
-  }
+  },
+  "hompages": "https://akffhaos95.github.io/rascal_photo_card"
 }
