@@ -1,0 +1,34 @@
+{
+    "players" : [
+        {
+            "name" : "김형준",
+            "number" : 10,
+            "image" : "",
+            
+            "batter" : [10, 30, 10, 80, 50, 10],
+            "batter_add" : "배터",
+            "pitcher" : [10, 50, 80, 10, 30, 10],
+            "pitcher_add" : "피쳐",
+
+            "comment" : "Legend Mr.Zero",
+            "comment2" : "tmp",
+            "comment_style" : "",
+            "comment2_style" : ""
+        },
+        {
+            "name" : "김범희",
+            "number" : 46,
+            "image" : "",
+            
+            "batter" : [10, 30, 10, 80, 50, 10],
+            "batter_add" : "범희",
+            "pitcher" : [10, 50, 80, 10, 30, 10],
+            "pitcher_add" : "범희2",
+
+            "comment" : "aaaaaa",
+            "comment2" : "12323232",
+            "comment_style" : "",
+            "comment2_style" : ""
+        }
+    ]
+}
