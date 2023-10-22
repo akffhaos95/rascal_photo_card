@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Hedaer from './components/Header';
-import CardSection from './components/CardSection';
+import CardSection from './components/CardModules/CardSection';
 import PlayerSection from './components/PlayerSection';
 import Footer from './components/Footer';
 import * as XLSX from 'xlsx';

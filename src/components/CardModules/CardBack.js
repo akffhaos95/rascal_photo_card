@@ -1,9 +1,10 @@
 import React from 'react';
-import CardTemplate from './CardModules/CardTemplate';
-import RadarChart from './CardModules/RadarChart';
-import Comment from './CardModules/Comment';
+import CardTemplate from './CardTemplate';
+import RadarChart from './RadarChart';
+import Comment from './Comment';
 import html2canvas from 'html2canvas';
-import Position from './CardModules/Position';
+import Position from './Position';
+import ProgressBar from './ProgressBar';
 
 const CardBack = ({ player, data }) => {
   const onCapture = () => {
@@ -23,6 +24,7 @@ const CardBack = ({ player, data }) => {
     <div id="back" onClick={onCapture}>
       <CardTemplate>
           <Position position={player['포지션']}/>
+          <ProgressBar title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? data['WHIP'] : data['V.C'] } /> 
           <RadarChart score = { playerData } att = { player['특수 항목'] } attScore = { player['특수 항목 점수'] } />
           <Comment comment = {player['코멘트']} />
       </CardTemplate>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import CardFront from './CardFront';
 import CardBack from './CardBack';
 import { styled } from '@mui/system';
@@ -20,7 +20,7 @@ const CardSection = ({ player, batter, pitcher }) => {
 
   return (
     <Container>
-        <CardFront id="front" en_name={ player['영어 이름']} name = { player['이름'] } number = { player['등번호'] } />
+        <CardFront id="front" player = { player } />
         <CardBack id="back" player = { player } data= { player['포지션']==="P" ? pitcher : batter }/>
         {/* <CardBack pitcher = { player.pitcher } pitcher_add = { player.pitcher_add } comment = { player.comment2 } comment_style = { player.comment2_style }/> */}
     </Container>

@@ -25,7 +25,6 @@ const RadarChart = ({ score, att, attScore }) => {
   const dataArrays = attributes.map((attribute) => 
     score[attribute]
   )
-
   attributes.push(att);
   dataArrays.push(attScore);
 
@@ -33,7 +32,7 @@ const RadarChart = ({ score, att, attScore }) => {
     display: 'flex',
     justifyContent: 'center',
     background: 'url(/image/logo.png) no-repeat center', // 원형 이미지 경로
-    backgroundSize: '230%'
+    backgroundSize: '230%',
   }
 
   const data = {
@@ -65,7 +64,7 @@ const RadarChart = ({ score, att, attScore }) => {
         pointLabels: {
           color: 'white',
           font: {
-            size: 15, // 라벨 폰트 크기 설정
+            size: 13, // 라벨 폰트 크기 설정
           },
         },
         angleLines: {
@@ -79,6 +78,7 @@ const RadarChart = ({ score, att, attScore }) => {
         display: false, // 라벨 숨김
       },
     },
+    // maintainAspectRatio: false
   };  
 
   return (

@@ -50,41 +50,41 @@ export const Name = styled('div')({
     fontWeight: 'bold'
 });
 
-const Image = styled('img')({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: 'auto',
-  height: 'auto',
-  zIndex: 0,
+export const Image = styled('img')({
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: 'auto',
+    height: 'auto',
+    zIndex: 0,
+  });
+  
+export const Number = styled('div')({
+    fontFamily: 'Chakra Petch, Chakra Petch',
+    fontSize: '60px',
+    position: 'absolute',
+    bottom: 0,
+    right: 20, 
+    color: 'white',
+    fontWeight: 'bold'
 });
 
-const Number = styled('div')({
-  fontFamily: 'Chakra Petch, Chakra Petch',
-  fontSize: '60px',
-  position: 'absolute',
-  bottom: 0,
-  right: 20, 
-  color: 'white',
-  fontWeight: 'bold'
-});
-
-const BackText1 = styled('div')({
-  transform: 'rotate(270deg)',
-  fontFamily: 'Monoton',
-  fontSize: '100px',
-  position: 'relative',
-  top: '200px',
-  right: '100px',
-  color: 'white'
+export const BackText1 = styled('div')({
+    transform: 'rotate(270deg)',
+    fontFamily: 'Monoton',
+    fontSize: '100px',
+    position: 'relative',
+    top: '250px',
+    right: '100px',
+    color: 'white'
 })
 
-const BackText2 = styled('div')({
-  transform: 'rotate(90deg)',
-  fontFamily: 'Monoton',
-  fontSize: '100px',
-  position: 'relative',
-  bottom: '60px',
-  left: '100px',
-  color: 'white'
+export const BackText2 = styled('div')({
+    transform: 'rotate(90deg)',
+    fontFamily: 'Monoton',
+    fontSize: '100px',
+    position: 'relative',
+    bottom: '60px',
+    left: '100px',
+    color: 'white'
 })

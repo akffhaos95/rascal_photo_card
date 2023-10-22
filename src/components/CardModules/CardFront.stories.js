@@ -4,16 +4,15 @@ import CardFront from './CardFront';
 export default {
   component: CardFront,
   title: 'CardFront',
-//   argTypes: {
-//     number: { control: 'number' },
-//     name: { control: 'name' } 
-//   }
 };
 
 const Template = (args) => <CardFront {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    number: 5,
-    name: "김민석"   
+  player: { 
+    "이름" : "김민석",
+    "영어 이름" : "KIM MIN SEOK",
+    "등번호" : 12
+  }
 }

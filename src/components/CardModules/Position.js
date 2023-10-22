@@ -16,7 +16,6 @@ const PositionBadge = styled(Avatar)(({ position }) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontWeight: 'bold', // 글꼴 굵기 설정
     fontWeight: 'bold',
 
     border: `2px solid transparent`,

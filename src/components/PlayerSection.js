@@ -1,16 +1,9 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { styled } from '@mui/system';
 
 // 선수 리스트 버튼 -> json 선수 개수만큼
 // 각 버튼 클릭 -> 선수 데이터로 useState 변경
-
-const NameButton = styled(Button)({
-  variant: "contained",
-  color: "primary",
-  margin: '10px'
-});
 
 const PlayerSection = ({ playerList, setPlayer }) => {
     
