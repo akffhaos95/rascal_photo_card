@@ -4,7 +4,7 @@ import RadarChart from './RadarChart';
 import Comment from './Comment';
 import html2canvas from 'html2canvas';
 import Position from './Position';
-import ProgressBar from './ProgressBar';
+import ProgressBarTemplate from './ProgressBarTemplate';
 
 const CardBack = ({ player, data }) => {
   const onCapture = () => {
@@ -23,10 +23,10 @@ const CardBack = ({ player, data }) => {
   return (
     <div id="back" onClick={onCapture}>
       <CardTemplate>
-          <Position position={player['포지션']}/>
-          <ProgressBar title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? data['WHIP'] : data['V.C'] } /> 
+          {/* <Position position={player['포지션']}/> */}
           <RadarChart score = { playerData } att = { player['특수 항목'] } attScore = { player['특수 항목 점수'] } />
-          <Comment comment = {player['코멘트']} />
+          <ProgressBarTemplate title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? playerData['WHIP'] : playerData['V.C'] } /> 
+          <Comment comment = {player['코멘트']} sign = {player['명대사']} />
       </CardTemplate>
     </div>
   );

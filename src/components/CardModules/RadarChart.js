@@ -31,7 +31,7 @@ const RadarChart = ({ score, att, attScore }) => {
   const style = {
     display: 'flex',
     justifyContent: 'center',
-    background: 'url(/image/logo.png) no-repeat center', // 원형 이미지 경로
+    // background: 'url(/image/logo.png) no-repeat center', // 원형 이미지 경로
     backgroundSize: '230%',
   }
 
@@ -78,7 +78,6 @@ const RadarChart = ({ score, att, attScore }) => {
         display: false, // 라벨 숨김
       },
     },
-    // maintainAspectRatio: false
   };  
 
   return (
