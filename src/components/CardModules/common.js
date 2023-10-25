@@ -1,23 +1,56 @@
 import { Box } from '@mui/material';
 import { styled } from '@mui/system'; 
 
-// PlayerBox.js
+// SignBox
+export const SignBox0 = styled(Box)({
+    // transform: 'rotate(-25deg)',
+    position: 'absolute', 
+    top: 100,
+    left: -50,
+})
 
-export const Box0 = styled(Box)({
+export const SignBox1 = styled(Box)({
+    width: '300px',
+    height: '100px',
+    backgroundColor: 'transparent', 
+    position: 'relative' 
+})
+
+export const SignBox2 = styled(Box)({
+    width: '300px', 
+    height: '100px', 
+    background: '#141E30', //'linear-gradient(0deg, #ffffff, #141E30)',
+    position: 'relative'
+})
+
+export const Sign = styled('div')({
+    fontFamily: 'Chakra Petch, Chakra Petch',
+    fontSize: '10px',
+    position: 'absolute', 
+    top: 0, 
+    left: 100, 
+    textAlign: 'left', 
+    color: 'white',
+    fontStyle: 'italic',
+    fontWeight: 'bold'
+});
+
+// PlayerBox
+export const PlayerBox0 = styled(Box)({
     transform: 'rotate(-25deg)',
     position: 'absolute', 
     top: 330,
     left: -50,
 })
 
-export const Box1 = styled(Box)({
+export const PlayerBox1 = styled(Box)({
     width: '600px',
     height: '100px',
     backgroundColor: 'transparent', 
     position: 'relative' 
 })
 
-export const Box2 = styled(Box)({
+export const PlayerBox2 = styled(Box)({
     width: '600px', 
     height: '300px', 
     background: '#141E30', //'linear-gradient(0deg, #ffffff, #141E30)',
@@ -76,7 +109,7 @@ export const BackText1 = styled('div')({
     position: 'relative',
     top: '250px',
     right: '100px',
-    color: 'white'
+    color: '#A9A9A9'
 })
 
 export const BackText2 = styled('div')({
@@ -86,5 +119,5 @@ export const BackText2 = styled('div')({
     position: 'relative',
     bottom: '60px',
     left: '100px',
-    color: 'white'
+    color: '#A9A9A9'
 })

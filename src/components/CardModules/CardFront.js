@@ -1,19 +1,32 @@
 import React from 'react';
 import CardTemplate from './CardTemplate';
 import html2canvas from 'html2canvas';
-import { Box0, Box1, Box2, Rascal, Name, Image, Number, BackText1, BackText2 } from './common';
+import { PlayerBox0, PlayerBox1, PlayerBox2, SignBox0, SignBox1, SignBox2, Sign, Rascal, Name, Image, Number, BackText1, BackText2 } from './common';
+
+export const SignBox = ({ sign }) => {
+  console.log("명대사 = " + sign)
+
+  return (
+      <SignBox0>
+          <SignBox1>
+          </SignBox1>
+          <SignBox2>
+              <Sign>{ sign }</Sign>
+          </SignBox2>
+      </SignBox0>            
+    );
+};
 
 export const PlayerBox = ({ name }) => {
   return (
-      <Box0>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"/>
-          <Box1>
+      <PlayerBox0>
+          <PlayerBox1>
           <Rascal>RASCAL</Rascal>
-          </Box1>
-          <Box2>
+          </PlayerBox1>
+          <PlayerBox2>
               <Name>{ name }</Name>
-          </Box2>
-      </Box0>            
+          </PlayerBox2>
+      </PlayerBox0>            
     );
 };
 
@@ -37,8 +50,10 @@ const CardFront = ({ player }) => {
 
   return (
       <div id="front" onClick={onCapture}>
-        <CardTemplate>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"/>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" />
+        <CardTemplate>
+          {/* <SignBox sign = { player['명대사'] }/> */}
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
           <BackText2>RASCAL</BackText2> 
           <Image src={`/image/${name}.png`}/>

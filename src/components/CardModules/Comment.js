@@ -1,15 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Box } from '@mui/material';
 import { styled } from '@mui/system';
-import * as Icons from 'react-icons/fa';
+import * as FaIcons from 'react-icons/fa';
+import * as SiIcons from 'react-icons/si';
+import * as GiIcons from "react-icons/gi";
+
+const iconPackages = [FaIcons, SiIcons, GiIcons]; 
 
 function DynamicIcon({ iconName }) {
-  const IconComponent = Icons[iconName];
+  let IconComponent;
 
-  if (!IconComponent) {
-    return null;
+  for (const pkg of iconPackages) {
+    if (pkg[iconName]) {
+      IconComponent = pkg[iconName];
+      break;
+    }
   }
 
+  if (!IconComponent) return null;
   return <IconComponent />;
 }
 
@@ -21,107 +29,64 @@ const MessageContainer = styled(Box)({
   margin: "10px 0"
 });
 
-const SenderContainer = styled(Box)({
-  display: "flex",
-  alignItems: "flex-end",
-  justifyContent: "flex-start",
-  flexDirection: "row",
-  margin: "20px 0 10px 0"
-});
-
-
 const SenderIcon = styled('div')({
+  flex: 1,
   width: "40px",
   height: "40px",
   borderRadius: "50%",
   marginLeft: "10px",
-  marginRight: "10px",
-  backgroundColor: "#ddd",
+  backgroundColor: "#ddd", /* 임시 배경색. 실제로는 이미지를 사용하면 됩니다. */
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   overflow: "hidden",
+  fontSize: "25px"
 })
 
 const MessageBubble = styled('div')({
+  flex: 10,
   padding: "10px 20px",
   borderRadius: "20px",
   background: "linear-gradient(145deg, #1c2a48, #283759)",
   boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
-  maxWidth: "90%",
+  maxWidth: "70%",
   whiteSpace: "pre-line",
   color: "white",
+  fontSize: "15px"
 })
 
-// // 1. 텍스트 데이터 파싱
-// function parseStyleText(styleText) {
-//   const styleArray = styleText.split(';');
-//   const styleObject = {};
+const Comment = ({ comment, commentStyle, icon }) => {
+  if (comment === undefined) return null;
 
-//   styleArray.forEach(item => {
-//     const [property, value] = item.split(':');
-//     if (property && value) {
-//       styleObject[property.trim()] = value.trim();
-//     }
-//   });
-//   return styleObject;
-// }
 
-// // 예제: 엑셀에서 가져온 스타일 텍스트
-// const excelStyleText = "font-family:Roboto;font-size:16px;color:#283759;";
+  // 나중에 props로 받을 부분들
+  if (commentStyle === undefined) {
+    commentStyle = 
+    '[{"fontSize":"11.9px"},{"fontSize":"21px"}]'
+  }
 
-// // 2. 객체로 변환
-// const parsedStyle = parseStyleText(excelStyleText);
+  if (icon === undefined) {
+    icon = "FaBookOpen"
+  }
 
-// // 3. 스타일 적용
-// const MessageBubble = styled.div(parsedStyle);
-
-const Comment = ({ comment, sign }) => {
-  const [sendSize, setSendSize] = useState(12); // 초기 폰트 크기
-  const [receivevSize, setReceiveSize] = useState(12); // 초기 폰트 크기
-
-  const SendBubble = styled(MessageBubble)({
-    textAlign: "left",
-    fontSize: sendSize
-  })
-
-  const ReceiveBubble = styled(MessageBubble)({
-    textAlign: "right",
-    fontSize: receivevSize
-  })
-
-  useEffect(() => {
-    function getFontSize(text) {
-      if (text !== undefined) {
-        const lines = text.split('\n');
-        const maxLength = Math.max(...lines.map(line => line.length));
-        console.log(maxLength)
-        if (maxLength > 40) return 8;
-        else if (maxLength > 25) return 10;
-        else if (maxLength > 20) return 12;
-        else return 14;
-      }
-    }
-
-    console.log(comment)
-    setReceiveSize(getFontSize(comment))
-    setSendSize(getFontSize(sign))
-  }, [comment, sign]);
-
-  
+  const lines = comment.split('\n');
+  const styles = JSON.parse(commentStyle);
 
   return (
     <>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" />
+
       <MessageContainer>
-
-        <SendBubble>{ comment }</SendBubble>
-        <SenderIcon><DynamicIcon iconName={"FaMouse"} /></SenderIcon>
+        <MessageBubble>
+          {lines.map((line, index) => (
+            <div key={index} style={styles[index]}>
+              {line}
+            </div>
+          ))}
+        </MessageBubble>
+        <SenderIcon><DynamicIcon iconName={icon} /></SenderIcon>
       </MessageContainer>
-
-      <SenderContainer>
-        <SenderIcon><DynamicIcon iconName={"FaMouse"} /></SenderIcon>
-        <ReceiveBubble>{ sign }</ReceiveBubble>
-      </SenderContainer>
     </>
   );
 };

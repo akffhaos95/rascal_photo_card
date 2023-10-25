@@ -26,7 +26,7 @@ const CardBack = ({ player, data }) => {
           {/* <Position position={player['포지션']}/> */}
           <RadarChart score = { playerData } att = { player['특수 항목'] } attScore = { player['특수 항목 점수'] } />
           <ProgressBarTemplate title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? playerData['WHIP'] : playerData['V.C'] } /> 
-          <Comment comment = {player['코멘트']} sign = {player['명대사']} />
+          <Comment comment = {player['코멘트']} commentStyle = {player['코멘트 스타일']} icon = {player['코멘트 아이콘']} />
       </CardTemplate>
     </div>
   );
