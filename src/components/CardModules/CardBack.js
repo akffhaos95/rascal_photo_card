@@ -3,7 +3,6 @@ import CardTemplate from './CardTemplate';
 import RadarChart from './RadarChart';
 import Comment from './Comment';
 import html2canvas from 'html2canvas';
-import Position from './Position';
 import ProgressBarTemplate from './ProgressBarTemplate';
 
 const CardBack = ({ player, data }) => {

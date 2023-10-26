@@ -2,28 +2,41 @@ import { Box } from '@mui/material';
 import { styled } from '@mui/system'; 
 
 // SignBox
-export const SignBox0 = styled(Box)({
+export const SignBox = ({ sign }) => {
+    return (
+        <SignBox0>
+            <SignBox1>
+            </SignBox1>
+            <SignBox2>
+                <Sign>{ sign }</Sign>
+            </SignBox2>
+        </SignBox0>            
+      );
+  };
+  
+
+const SignBox0 = styled(Box)({
     // transform: 'rotate(-25deg)',
     position: 'absolute', 
     top: 100,
     left: -50,
 })
 
-export const SignBox1 = styled(Box)({
+const SignBox1 = styled(Box)({
     width: '300px',
     height: '100px',
     backgroundColor: 'transparent', 
     position: 'relative' 
 })
 
-export const SignBox2 = styled(Box)({
+const SignBox2 = styled(Box)({
     width: '300px', 
     height: '100px', 
     background: '#141E30', //'linear-gradient(0deg, #ffffff, #141E30)',
     position: 'relative'
 })
 
-export const Sign = styled('div')({
+const Sign = styled('div')({
     fontFamily: 'Chakra Petch, Chakra Petch',
     fontSize: '10px',
     position: 'absolute', 
@@ -36,28 +49,41 @@ export const Sign = styled('div')({
 });
 
 // PlayerBox
-export const PlayerBox0 = styled(Box)({
+export const PlayerBox = ({ name }) => {
+    return (
+        <PlayerBox0>
+            <PlayerBox1>
+            <Rascal>RASCAL</Rascal>
+            </PlayerBox1>
+            <PlayerBox2>
+                <Name>{ name }</Name>
+            </PlayerBox2>
+        </PlayerBox0>            
+    );
+};
+
+const PlayerBox0 = styled(Box)({
     transform: 'rotate(-25deg)',
     position: 'absolute', 
     top: 330,
     left: -50,
 })
 
-export const PlayerBox1 = styled(Box)({
+const PlayerBox1 = styled(Box)({
     width: '600px',
     height: '100px',
     backgroundColor: 'transparent', 
     position: 'relative' 
 })
 
-export const PlayerBox2 = styled(Box)({
+const PlayerBox2 = styled(Box)({
     width: '600px', 
     height: '300px', 
     background: '#141E30', //'linear-gradient(0deg, #ffffff, #141E30)',
     position: 'relative'
 })
 
-export const Rascal = styled('div')({
+const Rascal = styled('div')({
     fontFamily: 'Chakra Petch, Chakra Petch',
     fontSize: '90px',
     position: 'absolute', 
@@ -71,7 +97,7 @@ export const Rascal = styled('div')({
     textStroke: "1px #fff"
 });
 
-export const Name = styled('div')({
+const Name = styled('div')({
     fontFamily: 'Chakra Petch, Chakra Petch',
     fontSize: '50px',
     position: 'absolute', 
@@ -120,4 +146,38 @@ export const BackText2 = styled('div')({
     bottom: '60px',
     left: '100px',
     color: '#A9A9A9'
+})
+
+export const MessageContainer = styled(Box)({
+    display: "flex",
+    alignItems: "flex-end",
+    justifyContent: "flex-end",
+    flexDirection: "row",
+    margin: "10px 0"
+});
+
+export const SenderIcon = styled('div')({
+    flex: 1,
+    width: "40px",
+    height: "40px",
+    borderRadius: "50%",
+    marginLeft: "10px",
+    backgroundColor: "#ddd", /* 임시 배경색. 실제로는 이미지를 사용하면 됩니다. */
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    fontSize: "25px"
+})
+
+export const MessageBubble = styled('div')({
+    flex: 10,
+    padding: "10px 20px",
+    borderRadius: "20px",
+    background: "linear-gradient(145deg, #1c2a48, #283759)",
+    boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
+    maxWidth: "70%",
+    whiteSpace: "pre-line",
+    color: "white",
+    fontSize: "15px",
 })

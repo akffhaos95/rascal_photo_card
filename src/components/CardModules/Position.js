@@ -1,31 +1,23 @@
 import React from 'react';
-import { Avatar } from '@mui/material';
 import { styled } from '@mui/system'; 
 
-const positionColors = {
-    P: 'red',
-    LF: 'linear-gradient(0deg, #F5F5F5, #141E30)',
-    CF: 'blue',
-};
-
-const PositionBadge = styled(Avatar)(({ position }) => ({
-    background: 'white',
-    width: '48px',
-    height: '48px',
-    fontSize: '35px', // 포지션 텍스트의 글꼴 크기
+const PositionBadge = styled('div')({
+    position: 'absolute',
+    transform: 'rotate(20deg)',
+    bottom: 90, 
+    right: 20,
+    fontSize: '70px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontWeight: 'bold',
-
-    border: `2px solid transparent`,
-    backgroundClip: 'content-box',
-    backgroundImage: `linear-gradient(to bottom, #B8860B 20%, #FFDEAD, #B8860B)`,
-}));
+    fontFamily: 'Bungee Spice',
+    zIndex: 3
+});
 
 const Position = ({ position }) => {
     return (
-        <PositionBadge position={position}>
+        <PositionBadge>
+            <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
             { position }
         </PositionBadge>
     );
