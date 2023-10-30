@@ -52,7 +52,7 @@ const RadarChart = ({ score, att, attScore }) => {
     scales: {
       r: {
         min: 0,
-        max: 100, // 전체 Radar Chart의 최대값 설정
+        max: 100,
         ticks: {
           display: false
         },
@@ -64,7 +64,13 @@ const RadarChart = ({ score, att, attScore }) => {
         pointLabels: {
           color: 'white',
           font: {
-            size: 13, // 라벨 폰트 크기 설정
+            size: (context) => {
+              const value = context.label
+              if (typeof value === "string" && value.length >= 5) {
+                return 10;
+              }
+              return 13;
+            }
           },
         },
         angleLines: {
@@ -75,7 +81,7 @@ const RadarChart = ({ score, att, attScore }) => {
     },
     plugins: {
       legend: {
-        display: false, // 라벨 숨김
+        display: false,
       },
     },
   };  

@@ -3,12 +3,12 @@ import { LinearProgress, Box, Typography } from '@material-ui/core';
 import { styled } from '@mui/system';
 
 const CustomLinearProgress = styled(LinearProgress)({
+    flex: 6,
     height: '12px',
     borderRadius: '6px',
     backgroundColor: '#E0E0E0',
     boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
     filter: "drop-shadow(\"5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a\")",
-    flex: 1,
     '& .MuiLinearProgress-bar': {
         borderRadius: '6px',
         boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
@@ -20,14 +20,16 @@ const CustomLinearProgress = styled(LinearProgress)({
 });
   
 const ProgressBarContainer = styled('div')({
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    gap: '10px',
+  display: 'flex',
+  alignItems: 'center',
+  width: '100%',
+  gap: '10px',
 });
   
 const TitleLabel = styled('span')({
-    color: '#555',
+  flex: 1,
+  color: 'white',
+  fontFamily: "Titan One"
 });
   
 

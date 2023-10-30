@@ -1,8 +1,9 @@
 import React from 'react';
 import CardTemplate from './CardTemplate';
 import html2canvas from 'html2canvas';
-import { PlayerBox, Image, Number, BackText1, BackText2 } from './common';
+import { FrontTopBox, FrontBottomBox, PlayerBox, Image, Number, BackText1, BackText2 } from './common';
 import Position from './Position';
+import Sign from './Sign';
 
 const CardFront = ({ player }) => {
   const name = player['이름']
@@ -23,17 +24,19 @@ const CardFront = ({ player }) => {
 	};
 
   return (
-      <div id="front" onClick={onCapture}>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"/>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" />
+      <div id="front">
+      {/* onClick={onCapture}> */}
         <CardTemplate>
-          {/* <SignBox sign = { player['명대사'] }/> */}
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
-          <BackText2>RASCAL</BackText2> 
-          <Position position={ player['포지션' ]} />
+          <BackText2>RASCAL</BackText2>
+          {/* <Position position={ player['포지션' ]} /> */}
+          {/* <PlayerBox name={name}/> */}
+          {/* <Number>no. {number}</Number> */}
+          <FrontTopBox />
           <Image src={`/image/${name}.png`}/>
-          <PlayerBox name={name}/>
-          <Number>no. {number}</Number>
+          <FrontBottomBox />
+          <Sign sign={ player['명대사']} signStyle={ player['명대사 스타일']} />
+      
         </CardTemplate>
       </div>
   );

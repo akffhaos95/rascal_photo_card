@@ -26,6 +26,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-google-font-loader": "^1.1.0",
+    "react-html-parser": "^2.0.2",
     "react-icons": "^4.11.0",
     "react-progressbar-fancy": "^1.1.4",
     "react-scripts": "5.0.1",

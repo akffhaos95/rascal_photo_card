@@ -17,7 +17,6 @@ const PositionBadge = styled('div')({
 const Position = ({ position }) => {
     return (
         <PositionBadge>
-            <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet" />
             { position }
         </PositionBadge>
     );
