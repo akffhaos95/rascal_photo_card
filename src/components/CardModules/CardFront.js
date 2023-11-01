@@ -24,8 +24,7 @@ const CardFront = ({ player }) => {
 	};
 
   return (
-      <div id="front">
-      {/* onClick={onCapture}> */}
+      <div id="front" onClick={onCapture}>
         <CardTemplate>
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
           <BackText2>RASCAL</BackText2>

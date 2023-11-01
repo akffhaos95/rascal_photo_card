@@ -51,7 +51,7 @@
   background-color: #F9EB54;
   max-width: 300px;
   border-radius: 3px;
-  margin: 5px;  /* 추가 공간을 위해 마진 설정 */
+  margin: 3px;  /* 추가 공간을 위해 마진 설정 */
 }
 
 .speech-bubble-me::after {
@@ -78,7 +78,7 @@
   background-color: white;
   max-width: 300px;
   border-radius: 3px;
-  margin: 5px;  /* 추가 공간을 위해 마진 설정 */
+  margin: 3px;  /* 추가 공간을 위해 마진 설정 */
 }
 
 .speech-bubble-you::after {

@@ -6,7 +6,7 @@ export const SignBox = styled('div')({
     backgroundColor: '#283759',
     padding: '5px 5px',
     border: '3px solid #ffffff',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
+    // boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
     borderRadius: '15px',
     fontFamily: "'Poor Story', serif",
     color: '#F0E5C9',
@@ -53,7 +53,7 @@ export const FrontBottomBox = styled(Box)({
     background: '#141E30',
     transform: 'rotate(-25deg)',
     position: 'absolute', 
-    bottom: 30,
+    bottom: 100,
     left: -50,
 })
 
@@ -129,7 +129,7 @@ export const BackText1 = styled('div')({
     fontFamily: 'Monoton',
     fontSize: '100px',
     position: 'relative',
-    top: '250px',
+    top: '230px',
     right: '100px',
     color: '#A9A9A9',
     zIndex: 1
@@ -154,20 +154,6 @@ export const MessageContainer = styled(Box)({
     margin: "10px 0",
 });
 
-export const SenderIcon = styled('div')({
-    flex: 2,
-    width: "40px",
-    height: "40px",
-    borderRadius: "50%",
-    marginLeft: "10px",
-    backgroundColor: "#ddd", /* 임시 배경색. 실제로는 이미지를 사용하면 됩니다. */
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-    fontSize: "25px"
-})
-
 export const MessageBubble = styled('div')({
     flex: 10,
     padding: "10px 20px",
@@ -178,6 +164,7 @@ export const MessageBubble = styled('div')({
     maxHeight: "10%",
     whiteSpace: "pre-line",
     color: "white",
-    fontFamily: "Poor Story",
-    fontSize: "10px",
+    fontFamily: "Nanum Pen Script",
+    fontSize: "30px",
+    textAlign: "left",
 })

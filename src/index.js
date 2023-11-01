@@ -18,7 +18,9 @@ root.render(
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" />    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Script&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" />
     <App />
   </React.StrictMode>
 );
