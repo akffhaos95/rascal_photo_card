@@ -1,7 +1,7 @@
 import React from 'react';
 import CardTemplate from './CardTemplate';
 import html2canvas from 'html2canvas';
-import { FrontTopBox, FrontBottomBox, PlayerBox, Image, Number, BackText1, BackText2 } from './common';
+import { FrontTopBox, FrontBottomBox, Name, Image, Number, BackText1, BackText2 } from './common';
 import Position from './Position';
 import Sign from './Sign';
 
@@ -29,8 +29,9 @@ const CardFront = ({ player }) => {
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
           <BackText2>RASCAL</BackText2>
           {/* <Position position={ player['포지션' ]} /> */}
-          {/* <PlayerBox name={name}/> */}
-          {/* <Number>no. {number}</Number> */}
+
+          <Name>{name}</Name>
+          <Number>no. {number}</Number>
           <FrontTopBox />
           <Image src={`/image/${name}.png`}/>
           <FrontBottomBox />

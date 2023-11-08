@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -16,11 +16,10 @@ ChartJS.register(
   LineElement,
   Filler,
   Tooltip,
-  Legend
+  Legend,
 );
 
 const RadarChart = ({ score, att, attScore }) => {
-
   const attributes = Object.keys(score).filter((key) => key !== '이름' && key !== "WHIP" && key !== "V.C");  
   const dataArrays = attributes.map((attribute) => 
     score[attribute]
@@ -86,10 +85,30 @@ const RadarChart = ({ score, att, attScore }) => {
     },
   };  
 
+  const alwaysShowTooltip = {
+    id: 'alwaysShowTooltip',
+    afterDraw(chart, args, options) {
+      const { ctx } = chart;
+      ctx.save();
+      
+      chart.data.datasets.forEach((dataset, i) => {
+        chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
+          const {x, y} = datapoint.tooltipPosition();
+          console.log(datapoint.tooltipPosition());
+
+          ctx.fillStyle = 'rgba(0,0,0,0.8)';
+          ctx.fillRect(x-5,y-5,5,5);
+
+        })
+      })
+
+    }
+  }
+
   return (
       <div>
         {/* <Image src={logoUrl}/> */}
-        <Radar style={style} data={data} options={options}/>
+        <Radar style={style} data={data} options={options} plugins={[alwaysShowTooltip]}/>
       </div>
   );
 };

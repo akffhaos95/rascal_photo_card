@@ -16,6 +16,25 @@ const App = () => {
   useEffect(() => {
     const fetchExcelData = async () => {
       try {
+        const url = "https://docs.google.com/spreadsheets/d/1CHYuCNbfoykx4aw7IFcUwsDuhLPV3Bh5/edit#gid=258449596"
+
+        fetch(url)
+        .then(res => res.arrayBuffer())
+        .then(arrayBuffer => new Uint8Array(arrayBuffer))
+        .then(ab => {
+          const workbook = XLSX.read(ab, { type: 'array' });
+
+          workbook.SheetNames.reduce((sheets, name) => {
+            const sheet = workbook.Sheets[name];
+            sheets[name] = XLSX.utils.sheet_to_json(sheet);
+            return sheets;
+          }, {})
+          console.log(workbook)
+          const playerWorkSheet = workbook.Sheets['선수'];
+          const playerData = XLSX.utils.sheet_to_json(playerWorkSheet);
+          console.log(playerData) 
+        })
+
         const filePath = `${process.env.PUBLIC_URL}/rascal_data.xlsx`;
         const response = await fetch(filePath);
         if (response.ok) {

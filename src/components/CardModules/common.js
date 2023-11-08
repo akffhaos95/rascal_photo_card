@@ -23,20 +23,6 @@ export const SignBox = styled('div')({
     zIndex: 3,
 })
 
-// PlayerBox
-export const PlayerBox = ({ name }) => {
-    return (
-        <PlayerBox0>
-            <PlayerBox1>
-            {/* <Rascal>RASCAL</Rascal> */}
-            </PlayerBox1>
-            <PlayerBox2>
-                {/* <Name>{ name }</Name> */}
-            </PlayerBox2>
-        </PlayerBox0>            
-    );
-};
-
 export const FrontTopBox = styled(Box)({
     width: '600px',
     height: '100px',
@@ -57,28 +43,6 @@ export const FrontBottomBox = styled(Box)({
     left: -50,
 })
 
-
-const PlayerBox0 = styled(Box)({
-    transform: 'rotate(-25deg)',
-    position: 'absolute', 
-    top: 330,
-    left: -50,
-})
-
-const PlayerBox1 = styled(Box)({
-    width: '600px',
-    height: '100px',
-    backgroundColor: 'transparent', 
-    position: 'relative' 
-})
-
-const PlayerBox2 = styled(Box)({
-    width: '600px', 
-    height: '300px', 
-    background: '#141E30', //'linear-gradient(0deg, #ffffff, #141E30)',
-    position: 'relative'
-})
-
 const Rascal = styled('div')({
     fontFamily: 'Chakra Petch, Chakra Petch',
     fontSize: '90px',
@@ -93,16 +57,17 @@ const Rascal = styled('div')({
     textStroke: "1px #fff"
 });
 
-const Name = styled('div')({
+export const Name = styled('div')({
     fontFamily: 'Chakra Petch, Chakra Petch',
     fontSize: '50px',
     position: 'absolute', 
     top: 0, 
-    left: 100, 
-    textAlign: 'left', 
+    left: 0, 
+    textAlign: 'center', 
     color: 'white',
     fontStyle: 'italic',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    zIndex: 3
 });
 
 export const Image = styled('img')({
@@ -164,7 +129,7 @@ export const MessageBubble = styled('div')({
     maxHeight: "10%",
     whiteSpace: "pre-line",
     color: "white",
-    fontFamily: "Nanum Pen Script",
-    fontSize: "30px",
-    textAlign: "left",
+    fontFamily: "Poor Story",
+    fontSize: "18px",
+    textAlign: "center",
 })
