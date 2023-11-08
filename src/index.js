@@ -22,6 +22,7 @@ root.render(
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Script&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" />
     <App />
   </React.StrictMode>
 );

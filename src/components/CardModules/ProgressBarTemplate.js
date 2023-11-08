@@ -32,12 +32,23 @@ const TitleLabel = styled('span')({
   fontFamily: "Titan One"
 });
   
-
 const ProgressBarTemplate = ({ title, score }) => {
+  const ScoreTooltip = styled('div')({
+    position: "absolute",
+    top: 334, 
+    left: 85 + score,
+    color: 'white',
+    fontFamily: "Kanit",
+    fontSize: "12px",
+  });
+  
+  // MuiLinearProgress-root 
+  // MuiLinearProgress-bar 
   return (
     <ProgressBarContainer>
       <TitleLabel>{ title }</TitleLabel>
       <CustomLinearProgress variant="determinate" value={score} />
+      <ScoreTooltip>{ score }</ScoreTooltip>
     </ProgressBarContainer>
   );
 };

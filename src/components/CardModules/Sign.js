@@ -4,12 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Sign = ({ sign, signStyle }) => {
   if (sign === undefined) return null;
-
-  // 나중에 props로 받을 부분들
-  if (signStyle === undefined) {
-    signStyle = '[]'
-    console.log("style null")
-  }
+  if (signStyle === undefined) signStyle = '[]'
 
 const text = `살 수 있다! 너는 산다! 뛰어! 뛰어! 4번이다!
 ㅤ
@@ -28,8 +23,7 @@ const tmp = `[{"fontSize":"23px", "fontFamily":"Nanum Brush Script"},
   
   const lines = sign.split('\n');
   const styles = JSON.parse(signStyle);
-  const env_url = `${process.env.PUBLIC_URL}`
-
+  
   return (
     <SignBox>
       {lines.map((line, index) => (

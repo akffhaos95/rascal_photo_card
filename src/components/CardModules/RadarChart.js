@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -50,8 +50,8 @@ const RadarChart = ({ score, att, attScore }) => {
   const options = {
     scales: {
       r: {
-        min: 0,
-        max: 100,
+        min: -5,
+        max: 110,
         ticks: {
           display: false
         },
@@ -85,6 +85,16 @@ const RadarChart = ({ score, att, attScore }) => {
     },
   };  
 
+  const tooltipPosition = [
+    {'x': 0, 'y': -5}, 
+    {'x': 8, 'y': -2},
+    {'x': 12, 'y': 5},
+    {'x': 4, 'y': 14},
+    {'x': -4, 'y': 14},
+    {'x': -12, 'y': 5},
+    {'x': -8, 'y': -2}
+  ];
+
   const alwaysShowTooltip = {
     id: 'alwaysShowTooltip',
     afterDraw(chart, args, options) {
@@ -94,11 +104,16 @@ const RadarChart = ({ score, att, attScore }) => {
       chart.data.datasets.forEach((dataset, i) => {
         chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
           const {x, y} = datapoint.tooltipPosition();
-          // console.log(datapoint.tooltipPosition());
-
-          ctx.fillStyle = 'rgba(0,0,0,0.8)';
-          ctx.fillRect(x-5,y-5,5,5);
-
+          const text = chart.data.datasets[i].data[index];
+          const textWidth = ctx.measureText(text).width;
+          
+          ctx.font = '12px Kanit';
+          ctx.fillStyle = 'white';
+          ctx.fillText(text, 
+            x - (textWidth/2) + tooltipPosition[index]['x'], 
+            y + tooltipPosition[index]['y']
+          )
+          ctx.restore();
         })
       })
 

@@ -6,7 +6,7 @@ export const SignBox = styled('div')({
     backgroundColor: '#283759',
     padding: '5px 5px',
     border: '3px solid #ffffff',
-    // boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
+    boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
     borderRadius: '15px',
     fontFamily: "'Poor Story', serif",
     color: '#F0E5C9',

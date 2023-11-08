@@ -4,12 +4,7 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Comment = ({ comment, commentStyle }) => {
   if (comment === undefined) return null;
-
-  // 나중에 props로 받을 부분들
-  if (commentStyle === undefined) {
-    commentStyle = 
-    `[]`
-  }
+  if (commentStyle === undefined) commentStyle = `[]`
 
 const text = `피지컬이나 건강 부분에서 걱정이 많은 선수입니다.
 가장 가벼운 배트를 사용함에도 휘둘려버리는 약한 근력.

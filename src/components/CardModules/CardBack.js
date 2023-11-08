@@ -4,7 +4,6 @@ import RadarChart from './RadarChart';
 import Comment from './Comment';
 import html2canvas from 'html2canvas';
 import ProgressBarTemplate from './ProgressBarTemplate';
-import Sign from './Sign';
 
 const CardBack = ({ player, data }) => {
   const onCapture = () => {
