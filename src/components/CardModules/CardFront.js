@@ -29,11 +29,10 @@ const CardFront = ({ player }) => {
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
           <BackText2>RASCAL</BackText2>
           {/* <Position position={ player['포지션' ]} /> */}
-
           <Name>{name}</Name>
           <Number>no. {number}</Number>
           <FrontTopBox />
-          <Image src={`/image/${name}.png`}/>
+          <Image src={`${process.env.PUBLIC_URL}/image/${name}.png`}/>
           <FrontBottomBox />
           <Sign sign={ player['명대사']} signStyle={ player['명대사 스타일']} />
       

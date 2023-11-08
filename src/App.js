@@ -29,10 +29,8 @@ const App = () => {
             sheets[name] = XLSX.utils.sheet_to_json(sheet);
             return sheets;
           }, {})
-          console.log(workbook)
           const playerWorkSheet = workbook.Sheets['선수'];
           const playerData = XLSX.utils.sheet_to_json(playerWorkSheet);
-          console.log(playerData) 
         })
 
         const filePath = `${process.env.PUBLIC_URL}/rascal_data.xlsx`;

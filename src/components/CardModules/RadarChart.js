@@ -94,7 +94,7 @@ const RadarChart = ({ score, att, attScore }) => {
       chart.data.datasets.forEach((dataset, i) => {
         chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
           const {x, y} = datapoint.tooltipPosition();
-          console.log(datapoint.tooltipPosition());
+          // console.log(datapoint.tooltipPosition());
 
           ctx.fillStyle = 'rgba(0,0,0,0.8)';
           ctx.fillRect(x-5,y-5,5,5);

@@ -28,12 +28,14 @@ const tmp = `[{"fontSize":"23px", "fontFamily":"Nanum Brush Script"},
   
   const lines = sign.split('\n');
   const styles = JSON.parse(signStyle);
+  const env_url = `${process.env.PUBLIC_URL}`
 
   return (
     <SignBox>
       {lines.map((line, index) => (
         <div key={index} style={styles[index]}>
           {ReactHtmlParser(line)}
+          {console.log(line)}
         </div>
       ))}
     </SignBox>
