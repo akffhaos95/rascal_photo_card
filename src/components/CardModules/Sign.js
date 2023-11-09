@@ -29,7 +29,6 @@ const tmp = `[{"fontSize":"23px", "fontFamily":"Nanum Brush Script"},
       {lines.map((line, index) => (
         <div key={index} style={styles[index]}>
           {ReactHtmlParser(line)}
-          {console.log(line)}
         </div>
       ))}
     </SignBox>

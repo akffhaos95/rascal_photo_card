@@ -1,9 +1,21 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { styled } from '@mui/system';
 
 // 선수 리스트 버튼 -> json 선수 개수만큼
 // 각 버튼 클릭 -> 선수 데이터로 useState 변경
+
+const PlayerButton = styled(Button)({
+  background: 'linear-gradient(45deg, #283759 30%, #435a6f 90%)',
+  border: 0,
+  borderRadius: 3,
+  boxShadow: '0 3px 5px 2px rgba(40, 55, 89, .3)',
+  color: 'white',
+  height: 25,
+  padding: '10px 15px',
+  margin: '5px'
+});
 
 const PlayerSection = ({ playerList, setPlayer }) => {
     
@@ -14,7 +26,7 @@ const PlayerSection = ({ playerList, setPlayer }) => {
   return (
     <Grid container spacing={2} margin="30px">      
       {playerList.map((player) => (
-        <Button onClick={() => changePlayer({player})}>{ player['이름'] }</Button> 
+        <PlayerButton onClick={() => changePlayer({player})}>{ player['이름'] }</PlayerButton> 
       ))}
     </Grid>
   );

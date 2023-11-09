@@ -9,7 +9,8 @@ const Container = styled('div')({
   alignItems: 'center',
   height: '100%',
   margin: '30px',
-  background: "#283759"
+  background: "#283759",
+  flexWrap: 'wrap'
 });
 
 const CardSection = ({ player, batter, pitcher }) => {
