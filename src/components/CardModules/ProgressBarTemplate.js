@@ -51,7 +51,7 @@ const ProgressBarTemplate = ({ title, score }) => {
     <ProgressBarContainer>
       <TitleLabel>{ title }</TitleLabel>
       <CustomLinearProgress variant="determinate" value={score} />
-      <ScoreTooltip scorePosition={scorePosition}>{ score }</ScoreTooltip>
+      <ScoreTooltip>{ score }</ScoreTooltip>
     </ProgressBarContainer>
   );
 };
