@@ -68,8 +68,8 @@ const App = () => {
       <Hedaer />
       {playerList != null ? (
         <>
-          <CardSection player={ player } batter={ batterList } pitcher={ pitcherList }/>
           <PlayerSection playerList = { playerList } setPlayer={ setPlayer } />
+          <CardSection player={ player } batter={ batterList } pitcher={ pitcherList }/>
         </>
       ) : 
         <></>

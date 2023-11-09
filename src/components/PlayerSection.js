@@ -7,14 +7,21 @@ import { styled } from '@mui/system';
 // 각 버튼 클릭 -> 선수 데이터로 useState 변경
 
 const PlayerButton = styled(Button)({
-  background: 'linear-gradient(45deg, #283759 30%, #435a6f 90%)',
+  color: "#FFFFFF",
+  background: 'linear-gradient(45deg, #B8860B, #DAA520)',
   border: 0,
   borderRadius: 3,
-  boxShadow: '0 3px 5px 2px rgba(40, 55, 89, .3)',
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.25)',
   color: 'white',
   height: 25,
   padding: '10px 15px',
-  margin: '5px'
+  margin: '5px',
+  // textShadow: ` 
+  //       -1px -1px 0 #000,  
+  //        1px -1px 0 #000,
+  //       -1px  1px 0 #000,
+  //        1px  1px 0 #000;
+  //   `
 });
 
 const PlayerSection = ({ playerList, setPlayer }) => {

@@ -20,7 +20,8 @@ const CardBack = ({ player, data }) => {
   const playerData = data.find((item) => item.이름 === player.이름);
 
   return (
-    <div id="back" onClick={onCapture}>
+    <div id="back" >
+    {/* onClick={onCapture}> */}
       <CardTemplate>
         {/* <Sign sign={ player['명대사']} signStyle={ player['명대사 스타일']} /> */}
         <RadarChart score = { playerData } att = { player['특수 항목'] } attScore = { player['특수 항목 점수'] } />

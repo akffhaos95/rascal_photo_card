@@ -6,34 +6,38 @@ const Comment = ({ comment, commentStyle }) => {
   if (comment === undefined) return null;
   if (commentStyle === undefined) commentStyle = `[]`
 
-const text = `피지컬이나 건강 부분에서 걱정이 많은 선수입니다.
-가장 가벼운 배트를 사용함에도 휘둘려버리는 약한 근력.
-숨이 차면 드러누워야하고 회복도 더딥니다.
+const text = `탈주닌자.. 아니, 탈주 선수가 되었으니
+다른 사회인 야구팀에 들어가 리그에서 만나기만 한다면 
+드라마 한편이 뚝딱입니다.
+써클렛.. 아니, 아우들이 선물해준 하이바에 줄 하나 그어주세요.
 ㅤ
-하지만 수비 능력은 팀에서 크게 인정받고 있습니다.
-22년에는 최우수 수비상을 두고 다투었을 정도이니까요.
+맹렬한 달리기의 끝에 감동적인 당신의 만세를 기억합니다. 
+물론 주루나 타법이 아닌 수비였지만요. 
+이 사실은 저희 팀만 알고 있을테니 너무 걱정마세요.
 ㅤ
-하지만 리그 수준이 높아지는 올해에는 삼진이 많아지고
-"걸어다니는 아웃카운트" 라는 불명예를 안게 됩니다.
+일요일 단 하루 만큼은. 라스칼의 야구선수였던
+당신의 지난 플레이에 찬사를 보냅니다.
+1루, 2루, 3루를 지나 홈으로 돌아오는 그날까지
+당신의 모든 전력질주는 팀을 나가도 여전히 모두가 응원할 것입니다.
 ㅤ
-24년에는 기초적인 체력과 피지컬을 단련하여
-운동신경에 걸맞는 하드웨어를 만들어 
-반등을 노립니다.
+"빠따 파이팅."
 `
 
-const tmp = `[{"fontSize":"15px"},
-{"fontSize":"13.7px"},
-{"fontSize":"15px"},
-{"fontSize":"5px"},
-{"fontSize":"14.5px"},
-{"fontSize":"13.5px"},
-{"fontSize":"5px"},
-{"fontSize":"13.7px"},
-{"fontSize":"14.4px"},
-{"fontSize":"5px"},
-{"fontSize":"16px"},
-{"fontSize":"17px"},
-{"fontSize":"17px"}]
+const tmp = `[{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"3px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"3px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"12px"},
+{"fontSize":"11.1px"},
+{"fontSize":"3px"},
+{"fontSize":"20px", "textAlign":"center", "fontFamily":"Black And White Picture"}]
 `
 
   const lines = comment.split('\n');

@@ -65,7 +65,9 @@ const RadarChart = ({ score, att, attScore }) => {
           font: {
             size: (context) => {
               const value = context.label
-              if (typeof value === "string" && value.length >= 5) {
+              if (typeof value === "string" && value.length >= 6) {
+                return 8;
+              } else if (typeof value === "string" && value.length >= 5) {
                 return 10;
               }
               return 13;
