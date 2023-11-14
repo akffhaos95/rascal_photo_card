@@ -9,14 +9,17 @@ const NameContainer = styled(Card)({
     boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5)',
     borderRadius: '15px',
     height: '30px',
-    color: '#F0E5C9',
     textAlign: 'center',
+    color: '#F0E5C9', 
+    fontSize: "26px",
+    fontFamily: 'Jua',  
 });
 
 const PositionAvatar = styled(Avatar)({
   width: '34px',
   height: '33px',
   marginRight: '7px',
+  fontFamily: 'ADLaM Display',
   background: 'linear-gradient(45deg, #283759 30%, #486581 90%)',
   border: '2px solid #DAA520',
   color: 'white',
@@ -45,9 +48,7 @@ function NameBox({ name, number, position, award }) {
       <PositionAvatar>{position}</PositionAvatar>
 
       <NameContainer>
-          <Typography variant="h6" style={{ fontWeight: 'bold' }}>
-            {number}.{name}
-        </Typography>
+          {number}.{name}
       </NameContainer>
 
       {award !== undefined ? <Award src={`${process.env.PUBLIC_URL}/image/${award}.png`} /> : null} 

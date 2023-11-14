@@ -12,6 +12,7 @@ root.render(
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap" /> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" />
@@ -23,6 +24,7 @@ root.render(
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" />
     <App />
   </React.StrictMode>
 );
