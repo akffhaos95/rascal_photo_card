@@ -10,7 +10,7 @@ const CardContainer = styled(Card)({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '7px',
+    margin: '15px',
     background: '#283759'
 });
 
