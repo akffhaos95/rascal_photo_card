@@ -15,13 +15,7 @@ const PlayerButton = styled(Button)({
   color: 'white',
   height: 25,
   padding: '10px 15px',
-  margin: '5px',
-  // textShadow: ` 
-  //       -1px -1px 0 #000,  
-  //        1px -1px 0 #000,
-  //       -1px  1px 0 #000,
-  //        1px  1px 0 #000;
-  //   `
+  margin: '5px'
 });
 
 const PlayerSection = ({ playerList, setPlayer }) => {

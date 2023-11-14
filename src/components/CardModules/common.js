@@ -43,33 +43,6 @@ export const FrontBottomBox = styled(Box)({
     left: -50,
 })
 
-const Rascal = styled('div')({
-    fontFamily: 'Chakra Petch, Chakra Petch',
-    fontSize: '90px',
-    position: 'absolute', 
-    bottom: -30, 
-    left: 100,
-    textAlign: 'left', 
-    color: '#141E30',
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-
-    textStroke: "1px #fff"
-});
-
-export const Name = styled('div')({
-    fontFamily: 'Chakra Petch, Chakra Petch',
-    fontSize: '50px',
-    position: 'absolute', 
-    top: 0, 
-    left: 0, 
-    textAlign: 'center', 
-    color: 'white',
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    zIndex: 3
-});
-
 export const Image = styled('img')({
     position: 'absolute',
     top: 0,
@@ -77,16 +50,6 @@ export const Image = styled('img')({
     width: 'auto',
     height: 'auto',
     zIndex: 2,
-  });
-  
-export const Number = styled('div')({
-    fontFamily: 'Chakra Petch, Chakra Petch',
-    fontSize: '60px',
-    position: 'absolute',
-    bottom: 0,
-    right: 20, 
-    color: 'white',
-    fontWeight: 'bold'
 });
 
 export const BackText1 = styled('div')({

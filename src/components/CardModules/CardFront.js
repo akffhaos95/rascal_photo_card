@@ -1,42 +1,29 @@
 import React from 'react';
 import CardTemplate from './CardTemplate';
 import html2canvas from 'html2canvas';
-import { FrontTopBox, FrontBottomBox, Name, Image, Number, BackText1, BackText2 } from './common';
-import Position from './Position';
+import { FrontTopBox, FrontBottomBox, Image, BackText1, BackText2 } from './common';
 import Sign from './Sign';
+import NameBox from './NameBox';
 
 const CardFront = ({ player }) => {
   const name = player['이름']
   const number = player['등번호']
   const en_name = player['영어 이름']
+  const position = player['포지션']
+  const award = player['어워즈']
 
   var middleName = en_name.split(" ");
 
-  const onCapture = () => {
-		html2canvas(document.getElementById('front')).then(canvas=>{
-      var link = document.createElement('a');
-      document.body.appendChild(link);
-      link.href = canvas.toDataURL('image/png');
-      link.download = name+"_front.png";
-      link.click();
-      document.body.removeChild(link);
-		});
-	};
-
   return (
       <div id="front" > 
-      {/* onClick={onCapture}> */}
         <CardTemplate>
           <BackText1>{middleName[1]}{middleName[2]}</BackText1> 
           <BackText2>RASCAL</BackText2>
-          {/* <Position position={ player['포지션' ]} /> */}
-          <Name>{name}</Name>
-          <Number>no. {number}</Number>
           <FrontTopBox />
+          <NameBox name={name} number={number} position={position} award={award}/>
           <Image src={`${process.env.PUBLIC_URL}/image/${name}.png`}/>
           <FrontBottomBox />
           <Sign sign={ player['명대사']} signStyle={ player['명대사 스타일']} />
-      
         </CardTemplate>
       </div>
   );

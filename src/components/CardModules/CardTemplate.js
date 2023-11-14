@@ -4,7 +4,6 @@ import CardContent from '@mui/material/CardContent';
 import { styled } from '@mui/system'; 
 
 const CardContainer = styled(Card)({
-    boxShadow: 0, 
     position: 'relative',
     width: '350px',
     height: '600px',
