@@ -79,6 +79,7 @@ export const MessageContainer = styled(Box)({
     alignItems: "flex-end",
     justifyContent: "flex-end",
     flexDirection: "row",
+    padding: "7px 0px 0px 0px"
 });
 
 export const MessageBubble = styled('div')({

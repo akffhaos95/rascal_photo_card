@@ -17,7 +17,7 @@ const CardContainer = styled(Card)({
 const CardTemplate = ({ children }) => {
   return (
     <CardContainer>
-        <CardContent>
+        <CardContent style={{padding: '0px 16px 16px 16px'}}>
             { children }
         </CardContent>
     </CardContainer>

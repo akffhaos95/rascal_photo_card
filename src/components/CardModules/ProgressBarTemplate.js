@@ -18,9 +18,11 @@ const CustomLinearProgress = styled(LinearProgress)({
 });
   
 const ProgressBarContainer = styled('div')({
+  position: 'absolute',
+  top: 305,
   display: 'flex',
   alignItems: 'center',
-  width: '100%',
+  width: '90%',
   gap: '10px',
 });
   
@@ -40,7 +42,7 @@ const ProgressBarTemplate = ({ title, score }) => {
 
   const ScoreTooltip = styled('div')({
     position: "absolute",
-    top: 16, 
+    top: 0, 
     left: 65 + calculatePosition(score),
     color: 'white',
     fontFamily: "Kanit",
