@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/rascal_photo_card/static/css/main.889d3c06.css",
-    "main.js": "/rascal_photo_card/static/js/main.ecd1f502.js",
+    "main.js": "/rascal_photo_card/static/js/main.b3531066.js",
     "index.html": "/rascal_photo_card/index.html",
     "main.889d3c06.css.map": "/rascal_photo_card/static/css/main.889d3c06.css.map",
-    "main.ecd1f502.js.map": "/rascal_photo_card/static/js/main.ecd1f502.js.map"
+    "main.b3531066.js.map": "/rascal_photo_card/static/js/main.b3531066.js.map"
   },
   "entrypoints": [
     "static/css/main.889d3c06.css",
-    "static/js/main.ecd1f502.js"
+    "static/js/main.b3531066.js"
   ]
 }
