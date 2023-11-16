@@ -9,6 +9,7 @@ const Container = styled('div')({
   alignItems: 'center',
   height: '100%',
   margin: '10px',
+  padding: '10px 0px 50px 10px',
   background: "#283759",
   flexWrap: 'wrap'
 });
