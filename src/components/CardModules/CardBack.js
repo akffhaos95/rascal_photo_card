@@ -11,8 +11,8 @@ const CardBack = ({ player, data }) => {
   return (
     <div id="back" >
       <CardTemplate>
+        {/* <ProgressBarTemplate title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? playerData['WHIP'] : playerData['V.C'] } />  */}
         <RadarChart score = { playerData } att = { player['특수 항목'] } attScore = { player['특수 항목 점수'] } />
-        <ProgressBarTemplate title = { player['포지션']==="P" ? "WHIP" : "V.C" } score = { player['포지션']==="P" ? playerData['WHIP'] : playerData['V.C'] } /> 
         <Comment comment = {player['코멘트']} commentStyle = {player['코멘트 스타일']} />
       </CardTemplate>
     </div>

@@ -15,7 +15,7 @@ export const SignBox = styled('div')({
     lineHeight: '1.3',
     
     margin: "12.3px",
-    marginBottom: "20px",
+    marginBottom: "10px",
     width: "310px",
     position: "absolute",
     bottom:0,
@@ -79,12 +79,11 @@ export const MessageContainer = styled(Box)({
     alignItems: "flex-end",
     justifyContent: "flex-end",
     flexDirection: "row",
-    margin: "10px 0",
 });
 
 export const MessageBubble = styled('div')({
     flex: 10,
-    padding: "10px 20px",
+    padding: "5px 20px",
     borderRadius: "20px",
     background: "linear-gradient(145deg, #1c2a48, #283759)",
     boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",

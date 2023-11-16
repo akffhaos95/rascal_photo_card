@@ -6,7 +6,7 @@ import { styled } from '@mui/system';
 const CardContainer = styled(Card)({
     position: 'relative',
     width: '350px',
-    height: '600px',
+    height: '543px',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -16,7 +16,7 @@ const CardContainer = styled(Card)({
 
 const CardTemplate = ({ children }) => {
   return (
-    <CardContainer elevation={0}>
+    <CardContainer>
         <CardContent>
             { children }
         </CardContent>

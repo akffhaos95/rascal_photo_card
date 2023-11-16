@@ -28,6 +28,7 @@ const RadarChart = ({ score, att, attScore }) => {
   dataArrays.push(attScore);
 
   const style = {
+    height: "280px",
     display: 'flex',
     justifyContent: 'center',
     backgroundSize: '230%',

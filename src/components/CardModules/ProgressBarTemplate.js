@@ -40,7 +40,7 @@ const ProgressBarTemplate = ({ title, score }) => {
 
   const ScoreTooltip = styled('div')({
     position: "absolute",
-    top: 334, 
+    top: 16, 
     left: 65 + calculatePosition(score),
     color: 'white',
     fontFamily: "Kanit",
