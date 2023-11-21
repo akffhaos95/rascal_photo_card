@@ -23,6 +23,7 @@ const CardFront = ({ player }) => {
       return name
     }
   }
+  console.log(player['명대사'])
   
   var middleName = en_name.split(" ");
 
