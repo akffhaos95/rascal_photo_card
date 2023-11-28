@@ -4,19 +4,19 @@ import { styled } from '@mui/system';
 // SignBox
 export const SignBox = styled('div')({
     backgroundColor: '#283759',
-    padding: '5px 5px',
-    border: '3px solid #ffffff',
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
-    borderRadius: '15px',
+    padding: '15px 15px',
+    border: '9px solid #ffffff',
+    boxShadow: '0 0 60px rgba(0, 0, 0, 0.5)',
+    borderRadius: '45px',
     fontFamily: "'Poor Story', serif",
     color: '#F0E5C9',
-    fontSize: '12px',
+    fontSize: '36px',
     textAlign: 'center',
     lineHeight: '1.3',
     
-    margin: "12.3px",
-    marginBottom: "10px",
-    width: "310px",
+    margin: "36.9px",
+    marginBottom: "30px",
+    width: "930px",
     position: "absolute",
     bottom:0,
     left:0,
@@ -24,41 +24,41 @@ export const SignBox = styled('div')({
 })
 
 export const FrontTopBox = styled(Box)({
-    width: '600px',
-    height: '100px',
+    width: '1800px',
+    height: '300px',
     background: '#141E30',
     transform: 'rotate(-25deg)',
     position: 'absolute', 
-    top: 30,
-    left: -50,
+    top: 90,
+    left: -150,
 })
 
 export const FrontBottomBox = styled(Box)({
-    width: '600px',
-    height: '100px',
+    width: '1800px',
+    height: '300px',
     background: '#141E30',
     transform: 'rotate(-25deg)',
     position: 'absolute', 
-    bottom: 100,
-    left: -50,
+    bottom: 300,
+    left: -150,
 })
 
 export const Image = styled('img')({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: 'auto',
-    height: 'auto',
+    width: '100%',
+    height: 'auth',
     zIndex: 2,
 });
 
 export const BackText1 = styled('div')({
     transform: 'rotate(270deg)',
     fontFamily: 'Monoton',
-    fontSize: '100px',
+    fontSize: '300px',
     position: 'relative',
-    top: '230px',
-    right: '100px',
+    top: '700px',
+    right: '300px',
     color: '#A9A9A9',
     zIndex: 1
 })
@@ -66,10 +66,10 @@ export const BackText1 = styled('div')({
 export const BackText2 = styled('div')({
     transform: 'rotate(90deg)',
     fontFamily: 'Monoton',
-    fontSize: '100px',
+    fontSize: '300px',
     position: 'relative',
-    bottom: '60px',
-    left: '100px',
+    bottom: '180px',
+    left: '300px',
     color: '#A9A9A9',
     zIndex: 1,
 })
@@ -79,20 +79,20 @@ export const MessageContainer = styled(Box)({
     alignItems: "flex-end",
     justifyContent: "flex-end",
     flexDirection: "row",
-    padding: "7px 0px 0px 0px"
+    padding: "21px 0px 0px 0px"
 });
 
 export const MessageBubble = styled('div')({
     flex: 10,
-    padding: "5px 20px",
-    borderRadius: "20px",
+    padding: "15px 60px",
+    borderRadius: "60px",
     background: "linear-gradient(145deg, #1c2a48, #283759)",
-    boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
+    boxShadow:  "15px 15px 30px #1c2a48, -15px -15px 30px #3a4a6a",
     maxWidth: "100%",
     maxHeight: "10%",
     whiteSpace: "pre-line",
     color: "white",
     fontFamily: "Poor Story",
-    fontSize: "18px",
+    fontSize: "48px",
     textAlign: "center",
 })

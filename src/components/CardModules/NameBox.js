@@ -5,29 +5,30 @@ import { styled } from '@mui/material/styles';
 const NameContainer = styled(Card)({
     flex: 5,
     backgroundColor: '#283759',
-    border: '3px solid #B8860B',
-    boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.5)',
-    borderRadius: '15px',
-    height: '30px',
+    border: '9px solid #B8860B',
+    boxShadow: 'inset 0 0 30px rgba(0, 0, 0, 0.5)',
+    borderRadius: '45px',
+    height: '90px',
     textAlign: 'center',
     color: '#F0E5C9', 
-    fontSize: "26px",
+    fontSize: "78px",
     fontFamily: 'Jua',  
 });
 
 const PositionAvatar = styled(Avatar)({
-  width: '34px',
-  height: '33px',
-  marginRight: '7px',
+  width: '102px',
+  height: '99px',
+  marginRight: '21px',
   fontFamily: 'ADLaM Display',
   background: 'linear-gradient(45deg, #283759 30%, #486581 90%)',
-  border: '2px solid #DAA520',
+  border: '6px solid #DAA520',
   color: 'white',
+  fontSize: "70px"
 });
 
 const Award = styled('img')({
-    width: '90px',
-    height: '90px',
+    width: '270px',
+    height: '270px',
 });
   
 
@@ -37,9 +38,9 @@ function NameBox({ name, number, position, award }) {
     top:0,
     left:0,
     zIndex: 3,
-    padding: '5px 5px',
-    margin: award !== undefined ? "3px 3px 2.3px 12.3px" : "3px 12.3px",   
-    width: award !== undefined ? "330px" : "310px",
+    padding: '15px 15px',
+    margin: award !== undefined ? "9px 9px 6.9px 36.9px" : "9px 36.9px",   
+    width: award !== undefined ? "990px" : "930px",
     display: 'flex',
   });
 

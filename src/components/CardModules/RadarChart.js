@@ -28,7 +28,7 @@ const RadarChart = ({ score, att, attScore }) => {
   dataArrays.push(attScore);
 
   const style = {
-    height: "280px",
+    height: "940px",
     display: 'flex',
     justifyContent: 'center',
     backgroundSize: '230%',
@@ -66,11 +66,11 @@ const RadarChart = ({ score, att, attScore }) => {
             size: (context) => {
               const value = context.label
               if (typeof value === "string" && value.length >= 6) {
-                return 8;
+                return 24;
               } else if (typeof value === "string" && value.length >= 5) {
-                return 10;
+                return 30;
               }
-              return 13;
+              return 39;
             }
           },
         },
@@ -88,13 +88,13 @@ const RadarChart = ({ score, att, attScore }) => {
   };  
 
   const tooltipPosition = [
-    {'x': 0, 'y': -5}, 
-    {'x': 8, 'y': -2},
-    {'x': 12, 'y': 5},
-    {'x': 4, 'y': 14},
-    {'x': -4, 'y': 14},
-    {'x': -12, 'y': 5},
-    {'x': -8, 'y': -2}
+    {'x': 0, 'y': -15}, 
+    {'x': 24, 'y': -6},
+    {'x': 36, 'y': 15},
+    {'x': 12, 'y': 42},
+    {'x': -12, 'y': 46},
+    {'x': -36, 'y': 15},
+    {'x': -24, 'y': -6}
   ];
 
   const alwaysShowTooltip = {
@@ -109,7 +109,7 @@ const RadarChart = ({ score, att, attScore }) => {
           const text = chart.data.datasets[i].data[index];
           const textWidth = ctx.measureText(text).width;
           
-          ctx.font = '12px Kanit';
+          ctx.font = '36px Kanit';
           ctx.fillStyle = 'white';
           ctx.fillText(text, 
             x - (textWidth/2) + tooltipPosition[index]['x'], 
@@ -124,7 +124,6 @@ const RadarChart = ({ score, att, attScore }) => {
 
   return (
       <div>
-        {/* <Image src={logoUrl}/> */}
         <Radar style={style} data={data} options={options} plugins={[alwaysShowTooltip]}/>
       </div>
   );

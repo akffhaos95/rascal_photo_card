@@ -4,49 +4,49 @@ import { styled } from '@mui/system';
 
 const CustomLinearProgress = styled(LinearProgress)({
     flex: 6,
-    height: '12px',
-    borderRadius: '6px',
+    height: '36px',
+    borderRadius: '18px',
     backgroundColor: '#E0E0E0',
-    boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
-    filter: "drop-shadow(\"5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a\")",
+    boxShadow:  "15px 15px 30px #1c2a48, -15px -15px 30px #3a4a6a",
+    filter: "drop-shadow(\"15px 15px 30px #1c2a48, -15px -15px 30px #3a4a6a\")",
     '& .MuiLinearProgress-bar': {
-        borderRadius: '6px',
-        boxShadow:  "5px 5px 10px #1c2a48, -5px -5px 10px #3a4a6a",
-        backgroundImage: 'linear-gradient(90deg, #ff4500, #ff8c00, #ff4500)',  // <-- 불타는 느낌의 그래디언트 추가
-        
+        borderRadius: '18px',
+        boxShadow:  "15px 15px 30px #1c2a48, -15px -15px 30px #3a4a6a",
+        backgroundImage: 'linear-gradient(90deg, #ff4500, #ff8c00, #ff4500)'
     },
 });
   
 const ProgressBarContainer = styled('div')({
   position: 'absolute',
-  top: 305,
+  top: 915,
   display: 'flex',
   alignItems: 'center',
   width: '90%',
-  gap: '10px',
+  gap: '30px',
 });
   
 const TitleLabel = styled('span')({
   flex: 1,
   color: 'white',
-  fontFamily: "Titan One"
+  fontFamily: "Titan One",
+  fontSize: "36px"
 });
   
 const ProgressBarTemplate = ({ title, score }) => {
 
   const calculatePosition = (score) => {
     const maxScore = 100; // 점수 최대값
-    const maxPosition = 125; // 위치 최대값
+    const maxPosition = 375; // 위치 최대값
     return (score / maxScore) * maxPosition;
   };
 
   const ScoreTooltip = styled('div')({
     position: "absolute",
-    top: 0, 
-    left: 45 + calculatePosition(score),
+    top: -5, 
+    left: 135 + calculatePosition(score),
     color: 'white',
     fontFamily: "Kanit",
-    fontSize: "12px",
+    fontSize: "36px",
   });
   
   return (
