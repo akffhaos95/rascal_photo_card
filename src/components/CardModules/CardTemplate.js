@@ -5,19 +5,19 @@ import { styled } from '@mui/system';
 
 const CardContainer = styled(Card)({
     position: 'relative',
-    width: '350px',
-    height: '543px',
+    width: '1050px',
+    height: '1629px',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '15px',
+    margin: '45px',
     background: '#283759'
 });
 
 const CardTemplate = ({ children }) => {
   return (
     <CardContainer>
-        <CardContent style={{padding: '0px 16px 16px 16px'}}>
+        <CardContent style={{padding: '0px 48px 48px 48px'}}>
             { children }
         </CardContent>
     </CardContainer>

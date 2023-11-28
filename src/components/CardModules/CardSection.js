@@ -8,7 +8,7 @@ const Container = styled('div')({
   justifyContent: 'center',
   alignItems: 'center',
   height: '100%',
-  margin: '10px',
+  margin: '30px',
   padding: '10px 0px 50px 10px',
   background: "#283759",
   flexWrap: 'wrap'
