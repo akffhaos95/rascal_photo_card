@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Facon";
+  src: url("../../public/fonts/Facon.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jalnan";
+  src: url("../../public/fonts/JalnanGothic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PartialSans";
+  src: url("../../public/fonts/PartialSansKR-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HakgyoansimMulgyeol";
+  src: url("../../public/fonts/HakgyoansimMulgyeolOTFB.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

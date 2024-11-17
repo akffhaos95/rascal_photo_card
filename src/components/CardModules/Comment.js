@@ -1,12 +1,13 @@
-import React from 'react';
-import { MessageContainer, MessageBubble } from './common';
-import ReactHtmlParser from 'react-html-parser';
+import { MessageBubble, MessageContainer } from "./common";
+
+import React from "react";
+import ReactHtmlParser from "react-html-parser";
 
 const Comment = ({ comment, commentStyle }) => {
   if (comment === undefined) return null;
-  if (commentStyle === undefined) commentStyle = `[]`
+  if (commentStyle === undefined) commentStyle = `[]`;
 
-const text = `탈주닌자.. 아니, 탈주 선수가 되었으니
+  const text = `탈주닌자.. 아니, 탈주 선수가 되었으니
 다른 사회인 야구팀에 들어가 리그에서 만나기만 한다면 
 드라마 한편이 뚝딱입니다.
 써클렛.. 아니, 아우들이 선물해준 하이바에 줄 하나 그어주세요.
@@ -21,9 +22,9 @@ const text = `탈주닌자.. 아니, 탈주 선수가 되었으니
 당신의 모든 전력질주는 팀을 나가도 여전히 모두가 응원할 것입니다.
 ㅤ
 "빠따 파이팅."
-`
+`;
 
-const tmp = `[{"fontSize":"12px"},
+  const tmp = `[{"fontSize":"12px"},
 {"fontSize":"12px"},
 {"fontSize":"12px"},
 {"fontSize":"12px"},
@@ -38,9 +39,9 @@ const tmp = `[{"fontSize":"12px"},
 {"fontSize":"11.1px"},
 {"fontSize":"3px"},
 {"fontSize":"20px", "textAlign":"center", "fontFamily":"Black And White Picture"}]
-`
+`;
 
-  const lines = comment.split('\n');
+  const lines = comment.split("\n");
   const styles = JSON.parse(commentStyle);
 
   return (
