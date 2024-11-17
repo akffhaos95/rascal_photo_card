@@ -26,7 +26,7 @@ const Profile = ({ player, data }) => {
         {player["이름"]} ({en_name})
       </Typography>
       <Typography variant="body1" color="textSecondary">
-        Jersey No: {player["등번호"]}
+        No: {player["등번호"]}
       </Typography>
       <Typography variant="body1" color="textSecondary">
         Position: {player["포지션"]}
