@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/rascal_photo_card/static/css/main.6a835d87.css",
-    "main.js": "/rascal_photo_card/static/js/main.7db8fe46.js",
+    "main.js": "/rascal_photo_card/static/js/main.01501e0c.js",
     "static/media/JalnanGothic.otf": "/rascal_photo_card/static/media/JalnanGothic.f6dc7d5d4b8c2f4fbff9.otf",
     "static/media/HakgyoansimMulgyeolOTFB.otf": "/rascal_photo_card/static/media/HakgyoansimMulgyeolOTFB.ddc81821e9b449df0838.otf",
     "static/media/PartialSansKR-Regular.otf": "/rascal_photo_card/static/media/PartialSansKR-Regular.3788df4812a626e9a2ca.otf",
     "static/media/Facon.otf": "/rascal_photo_card/static/media/Facon.abd0b03858195fb046f1.otf",
     "index.html": "/rascal_photo_card/index.html",
     "main.6a835d87.css.map": "/rascal_photo_card/static/css/main.6a835d87.css.map",
-    "main.7db8fe46.js.map": "/rascal_photo_card/static/js/main.7db8fe46.js.map"
+    "main.01501e0c.js.map": "/rascal_photo_card/static/js/main.01501e0c.js.map"
   },
   "entrypoints": [
     "static/css/main.6a835d87.css",
-    "static/js/main.7db8fe46.js"
+    "static/js/main.01501e0c.js"
   ]
 }
