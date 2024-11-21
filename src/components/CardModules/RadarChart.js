@@ -10,6 +10,7 @@ import {
 
 import { Radar } from "react-chartjs-2";
 import React from "react";
+import { margin } from "@mui/system";
 
 ChartJS.register(
   RadialLinearScale,

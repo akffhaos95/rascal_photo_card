@@ -17,7 +17,7 @@ const CardBack = ({ player, data }) => {
           style={{ zIndex: 9 }}
           src={`${process.env.PUBLIC_URL}/image/back.png`}
         />
-        <Profile player={player} data={data} />
+
         <RadarChart score={playerData} />
 
         <ProgressBarTemplate
@@ -26,6 +26,7 @@ const CardBack = ({ player, data }) => {
             player["포지션"] === "P" ? playerData["WHIP"] : playerData["V.C"]
           }
         />
+        <Profile player={player} data={data} />
       </CardTemplate>
     </div>
   );
