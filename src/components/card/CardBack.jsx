@@ -2,21 +2,34 @@ import React from "react";
 import CardTemplate from "./CardTemplate";
 import ScoreLayout from "../layout/ScoreLayout";
 import CustomDivider from "../modules/Divider";
+import { getScoreFromData } from "../util/getScoreFromData";
+import KeyMetricBar from "../modules/KeyMetricBar";
+import { getMetricFromData } from "../util/getMetricFromData";
+import StatBars from "../modules/StatBars";
+import { getStatData } from "../util/getStatData";
 
-const CardBack = () => {
+const CardBack = ({ data }) => {
+  if (!data) return null;
 
-  const score = [
-    { label: 'Math', value: 10 },
-    { label: 'Science', value: 30 },
-    { label: 'History', value: 58 },
-    { label: 'Art', value: 72 },
-    { label: 'Physical', value: 99 }
-  ]
-    
+  const score = getScoreFromData(data);
+  const metric = getMetricFromData(data);
+  const stat = getStatData(data);
+
+  console.log(data);
+  console.log(stat);
   return (
     <CardTemplate>
-        <ScoreLayout score={score} />
-        <CustomDivider />
+      <CustomDivider />
+      <ScoreLayout score={score} />
+      <KeyMetricBar metric={metric} />
+      <StatBars stat={stat} />
+      <StatBars
+        stat={[
+          { label: "Hit", value: 10 },
+          { label: "Out", value: 5 },
+          { label: "Base", value: 3 },
+        ]}
+      />
     </CardTemplate>
   );
 };

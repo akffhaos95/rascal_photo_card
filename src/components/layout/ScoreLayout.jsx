@@ -3,20 +3,18 @@ import ScoreProgress from "../modules/ScoreProgress";
 import Glass from "../modules/Glass";
 
 const ScoreLayout = ({ score }) => {
+  if (!score) return null;
 
-    if (!score) return null;
-    
-   const styles = {
+  const styles = {
     container: {
-        boxSizing: 'border-box',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '31px 0px',
-        gap: '5px',
-        width: '100%',  // Glass의 950px에 맞춤
-        height: 'auto', // 자동 높이
+      boxSizing: "border-box",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      padding: "31px 0px",
+      gap: "5px",
+      width: "100%", // Glass의 950px에 맞춤
+      height: "auto", // 자동 높이
     },
     item: {
       flex: 1,
@@ -43,13 +41,13 @@ const ScoreLayout = ({ score }) => {
       height: 36,
     },
   };
-  
+
   return (
     <Glass>
       <div style={styles.container}>
         {score.map((it, idx) => (
           <div key={idx}>
-              <ScoreProgress label={it.label} value={it.value} />
+            <ScoreProgress label={it.label} value={it.value} />
           </div>
         ))}
       </div>
