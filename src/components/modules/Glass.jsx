@@ -7,6 +7,7 @@ const GlassContainer = styled("div")({
   justifyContent: "center",
   alignItems: "center",
 
+  marginTop: 40,
   marginBottom: 40,
   background: "rgba(255, 255, 255, 0.1)",
   borderRadius: "16px",

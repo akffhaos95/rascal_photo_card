@@ -34,8 +34,8 @@ const StatBarItem = ({ label, color, value, subValue }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 6,
-            marginBottom: 10,
+            gap: 1,
+            marginBottom: 2,
           }}
         >
           <Typography
