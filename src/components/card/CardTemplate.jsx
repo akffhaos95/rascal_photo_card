@@ -1,28 +1,40 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import { styled } from "@mui/system";
 
 const CardContainer = styled(Card)({
   position: "relative",
-  display: "flex",
   width: "1050px",
   height: "1629px",
-  padding: "80px 17px",
-  gap: "10px",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
   margin: "45px",
+  overflow: "hidden",
+});
+
+const BackgroundLayer = styled("div")({
+  position: "absolute",
+  inset: 0,
+  zIndex: 0,
   background: "linear-gradient(180deg, #0A1A39 0%, #00356F 100%)",
+});
+
+const ContentLayer = styled("div")({
+  position: "relative",
+  zIndex: 1,
+  width: "100%",
+  height: "100%",
+  padding: "80px 17px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "column",
+  boxSizing: "border-box",
 });
 
 const CardTemplate = ({ children }) => {
   return (
     <CardContainer>
-      <CardContent style={{ padding: "0px 0px 0px 0px" }}>
-        {children}
-      </CardContent>
+      <BackgroundLayer />
+      <ContentLayer>{children}</ContentLayer>
     </CardContainer>
   );
 };

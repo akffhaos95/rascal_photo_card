@@ -34,9 +34,9 @@ const CardBack = ({ data }) => {
         {/* <Comment comment={profile.comment} /> */}
         <CustomDivider />
         <ScoreLayout score={score} />
+        <CustomDivider />
         <KeyMetricBar metric={metric} />
         <CustomDivider />
-        <ScoreLayout score={score} />
         <StatBars stat={stat} />
       </CardTemplate>
     </div>

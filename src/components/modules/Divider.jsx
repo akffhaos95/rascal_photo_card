@@ -7,7 +7,7 @@ const DividerContainer = styled("div")({
   justifyContent: "center",
   alignItems: "center",
   padding: "0px",
-  gap: "10px",
+
   width: "100%",
   height: "20px",
   flex: "none",
@@ -16,7 +16,7 @@ const DividerContainer = styled("div")({
 });
 
 const StyledDivider = styled("div")({
-  width: "100%",
+  width: "95%",
   height: "10px",
   opacity: 0.5,
   backgroundColor: "#FFFFFF",
@@ -26,9 +26,9 @@ const StyledDivider = styled("div")({
 
 const CustomDivider = () => {
   return (
-    <DividerContainer>
-      <StyledDivider />
-    </DividerContainer>
+    // <DividerContainer>
+    <StyledDivider />
+    // </DividerContainer>
   );
 };
 
