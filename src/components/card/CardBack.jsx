@@ -28,16 +28,18 @@ const CardBack = ({ data }) => {
     comment: "안녕하세요! 저는 열정적인 개발자 김민석입니다.",
   };
   return (
-    <CardTemplate>
-      <ProfileLayout player={profile} />
-      {/* <Comment comment={profile.comment} /> */}
-      <CustomDivider />
-      <ScoreLayout score={score} />
-      <KeyMetricBar metric={metric} />
-      <CustomDivider />
-      <ScoreLayout score={score} />
-      <StatBars stat={stat} />
-    </CardTemplate>
+    <div id="back">
+      <CardTemplate>
+        <ProfileLayout player={profile} />
+        {/* <Comment comment={profile.comment} /> */}
+        <CustomDivider />
+        <ScoreLayout score={score} />
+        <KeyMetricBar metric={metric} />
+        <CustomDivider />
+        <ScoreLayout score={score} />
+        <StatBars stat={stat} />
+      </CardTemplate>
+    </div>
   );
 };
 
