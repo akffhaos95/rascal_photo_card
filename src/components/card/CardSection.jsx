@@ -22,7 +22,7 @@ const CardSection = ({ player, data }) => {
   return (
     <Container>
       <CardFront id="front" player={player} />
-      <CardBack id="back" data={data} />
+      <CardBack id="back" player={player} data={data} />
     </Container>
   );
 };

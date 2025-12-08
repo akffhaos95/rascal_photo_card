@@ -10,7 +10,7 @@ import { getStatData } from "../util/getStatData";
 import ProfileLayout from "../layout/ProfileLayout";
 import Comment from "../modules/Comment";
 
-const CardBack = ({ data }) => {
+const CardBack = ({ player, data }) => {
   if (!data) return null;
 
   const score = getScoreFromData(data);
@@ -18,6 +18,7 @@ const CardBack = ({ data }) => {
   const stat = getStatData(data);
 
   const profile = {
+    이름: player["이름"],
     name: "김민석",
     number: "12",
     hitRight: false,
