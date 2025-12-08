@@ -3,13 +3,6 @@ import { Box, styled } from "@mui/material";
 import Glass from "../modules/Glass";
 import StatBarItem from "./StatBarItem";
 
-const Wrapper = styled(Box)({
-  padding: "20px 40px",
-  display: "flex",
-  flexDirection: "column",
-  gap: 20,
-});
-
 const StatBars = ({ stat }) => {
   const total =
     stat.length === 1

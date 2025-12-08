@@ -10,7 +10,7 @@ const STAT_COLORS = {
 
 export function getStatData(data) {
   if (!data) return [];
-  const isBatter = data["타석"] !== undefined;
+  const isBatter = data["OPS"] !== undefined;
   return isBatter ? getStatDataBatter(data) : getStatDataPitcher(data);
 }
 

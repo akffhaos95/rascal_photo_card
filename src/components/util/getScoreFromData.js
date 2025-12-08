@@ -1,11 +1,11 @@
 // utils/getScoreFromData.js
 
 const BATTER_FIELDS = [
-  { key: "타석", label: "타석" },
   { key: "타율", label: "타율" },
-  { key: "장타", label: "장타" },
-  { key: "도루", label: "도루" },
+  { key: "득점", label: "득점" },
   { key: "타점", label: "타점" },
+  { key: "도루", label: "도루" },
+  { key: "OPS", label: "OPS" },
 ];
 
 const PITCHER_FIELDS = [
@@ -19,7 +19,7 @@ const PITCHER_FIELDS = [
 export function getScoreFromData(data) {
   if (!data) return [];
 
-  const isBatter = data["타석"] !== undefined;
+  const isBatter = data["OPS"] !== undefined;
   const schema = isBatter ? BATTER_FIELDS : PITCHER_FIELDS;
 
   return schema.map(({ key, label }) => ({

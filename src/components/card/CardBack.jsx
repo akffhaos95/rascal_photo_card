@@ -8,9 +8,8 @@ import { getMetricFromData } from "../util/getMetricFromData";
 import StatBars from "../modules/StatBars";
 import { getStatData } from "../util/getStatData";
 import ProfileLayout from "../layout/ProfileLayout";
-import Comment from "../modules/Comment";
 
-const CardBack = ({ data }) => {
+const CardBack = ({ player, data }) => {
   if (!data) return null;
 
   const score = getScoreFromData(data);
@@ -30,7 +29,7 @@ const CardBack = ({ data }) => {
   return (
     <div id="back">
       <CardTemplate>
-        {/* <ProfileLayout player={profile} /> */}
+        <ProfileLayout player={player} />
         {/* <Comment comment={profile.comment} /> */}
         <CustomDivider />
         <ScoreLayout score={score} />
