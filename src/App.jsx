@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CardSection from "./components/Card/CardSection";
+import CardSection from "./components/card/CardSection";
 import * as XLSX from "xlsx";
 import SelectLayout from "./components/layout/SelectLayout";
 import html2canvas from "html2canvas";
