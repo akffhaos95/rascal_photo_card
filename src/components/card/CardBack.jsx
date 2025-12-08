@@ -10,7 +10,7 @@ import { getStatData } from "../util/getStatData";
 import ProfileLayout from "../layout/ProfileLayout";
 import Comment from "../modules/Comment";
 
-const CardBack = ({ player, data }) => {
+const CardBack = ({ data }) => {
   if (!data) return null;
 
   const score = getScoreFromData(data);
@@ -18,7 +18,6 @@ const CardBack = ({ player, data }) => {
   const stat = getStatData(data);
 
   const profile = {
-    이름: player["이름"],
     name: "김민석",
     number: "12",
     hitRight: false,
@@ -31,7 +30,7 @@ const CardBack = ({ player, data }) => {
   return (
     <div id="back">
       <CardTemplate>
-        <ProfileLayout player={profile} />
+        {/* <ProfileLayout player={profile} /> */}
         {/* <Comment comment={profile.comment} /> */}
         <CustomDivider />
         <ScoreLayout score={score} />
