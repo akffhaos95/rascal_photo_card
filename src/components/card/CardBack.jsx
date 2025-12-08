@@ -16,21 +16,10 @@ const CardBack = ({ player, data }) => {
   const metric = getMetricFromData(data);
   const stat = getStatData(data);
 
-  const profile = {
-    name: "김민석",
-    number: "12",
-    hitRight: false,
-    hitLeft: true,
-    throwRight: true,
-    throwLeft: false,
-    position: "투수",
-    comment: "안녕하세요! 저는 열정적인 개발자 김민석입니다.",
-  };
   return (
     <div id="back">
       <CardTemplate>
         <ProfileLayout player={player} />
-        {/* <Comment comment={profile.comment} /> */}
         <CustomDivider />
         <ScoreLayout score={score} />
         <CustomDivider />

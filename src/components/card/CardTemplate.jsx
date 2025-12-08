@@ -26,7 +26,7 @@ const ContentLayer = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "column",
+  justifyContent: "center",
   boxSizing: "border-box",
 });
 
