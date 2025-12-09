@@ -25,7 +25,7 @@ const CardFront = ({ player }) => {
       <CardTemplate>
         <FirstNameComponent firstName={firstName} />
         <BackNumberComponent backNumber={backNumber} />
-        <Image src={`/player/${player["이름"]}.png`} />
+        <Image src={`player/${player["이름"]}.png`} />
       </CardTemplate>
     </div>
   );

@@ -21,7 +21,7 @@ const SelectLayout = ({ setPlayer, setData, setImage }) => {
   useEffect(() => {
     const loadExcel = async () => {
       try {
-        const response = await fetch("/rascal.xlsx");
+        const response = await fetch("rascal.xlsx");
         const arrayBuffer = await response.arrayBuffer();
         const workbook = XLSX.read(arrayBuffer, { type: "array" });
 
@@ -55,7 +55,7 @@ const SelectLayout = ({ setPlayer, setData, setImage }) => {
     setPlayer(playerRow);
     setData(batterRow || pitcherRow);
 
-    const defaultImage = `/${name}.png`;
+    const defaultImage = `${name}.png`;
     setImage(defaultImage);
 
     console.log(playerRow);
