@@ -18,8 +18,8 @@ const HandIconCircle = ({ kind, value }) => {
   }
 
   const colorMap = {
-    R: "rgba(100,181,246,0.9)", // 파랑
-    L: "rgba(239,83,80,0.9)", // 빨강
+    R: "rgba(74, 160, 226, 0.77)", // 파랑
+    L: "rgba(243, 130, 16, 0.9)", // 빨강
     S: "rgba(171,71,188,0.9)", // 보라 (양타)
     "?": "rgba(189,189,189,0.9)",
   };
@@ -64,9 +64,10 @@ const HandIconCircle = ({ kind, value }) => {
       {/* 중앙 L / R / S */}
       <Box
         sx={{
-          fontSize: 40,
+          fontSize: 50,
           fontWeight: 900,
           letterSpacing: 2,
+          fontFamily: 'Calibri, "Segoe UI", system-ui, sans-serif',
         }}
       >
         {side}
@@ -163,7 +164,7 @@ const ProfileLayout = ({ player }) => {
           padding: "24px 28px",
           display: "flex",
           flexDirection: "column",
-          gap: 1.8,
+          gap: 4,
         }}
       >
         {/* 이름 / 영어 이름 / 등번호 */}

@@ -22,11 +22,11 @@ const ContentLayer = styled("div")({
   zIndex: 1,
   width: "100%",
   height: "100%",
-  padding: "80px 17px",
+  padding: "0px 17px",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "column",
   boxSizing: "border-box",
 });
 

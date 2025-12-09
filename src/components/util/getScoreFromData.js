@@ -11,9 +11,9 @@ const BATTER_FIELDS = [
 const PITCHER_FIELDS = [
   { key: "이닝", label: "이닝" },
   { key: "방어율", label: "방어율" },
-  { key: "삼진", label: "삼진" },
+  { key: "탈삼진", label: "탈삼진" },
   { key: "피안타율", label: "피안타율" },
-  { key: "볼넷", label: "볼넷" },
+  { key: "제구", label: "제구" },
 ];
 
 export function getScoreFromData(data) {

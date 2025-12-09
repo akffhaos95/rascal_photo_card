@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, styled } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 import Glass from "../modules/Glass";
 import StatBarItem from "./StatBarItem";
 
@@ -14,7 +14,21 @@ const StatBars = ({ stat }) => {
       <Box
         sx={{
           width: "100%",
+          boxSizing: "border-box",
+          padding: "0px 28px",
           display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Typography fontSize={50} fontWeight={900} color="#fff">
+          Total : {total}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          gap: 1,
         }}
       >
         {stat.map((item) => {
@@ -25,7 +39,7 @@ const StatBars = ({ stat }) => {
               key={item.label}
               sx={{
                 width: `${percent}%`, // ✅ 진짜 비율
-                paddingX: 0.5, // ✅ gap은 padding으로 해결
+
                 boxSizing: "border-box",
               }}
             >
